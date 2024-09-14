@@ -40,8 +40,8 @@ function bloodGame() {
                 
                 do{
                     
-                    responseStudent = prompt("Ingresa el grupo sanguineo de un posible donante, para el tipo de sangre "+randomBlood+ " : ").toUpperCase();
-                    if(!donantesCompatibles["AB+"].includes(responseStudent)){
+                   responseStudent = prompt("Ingresa el grupo sanguineo de un posible donante, para el tipo de sangre "+randomBlood+ " : ").toUpperCase();
+                     if(!donantesCompatibles["AB+"].includes(responseStudent)){
                         console.log("NO HAS INGRESADO UN TIPO DE SANGRE VÁLIDO ('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-')")
                     }
 
@@ -71,17 +71,13 @@ function bloodGame() {
                 
                 do{
                     
-                    responseStudent = prompt("Ingresa el grupo sanguineo de un posible receptor, del tipo de sangre "+randomBlood+ " : ").toUpperCase();
+                    responseStudent = prompt("El tipo de sangre "+randomBlood+ " a que receptor le puede donar : ").toUpperCase();
                     if(!donantesCompatibles["AB+"].includes(responseStudent)){
                         console.log("NO HAS INGRESADO UN TIPO DE SANGRE VÁLIDO ('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-')")
                     }
 
                 }while(!donantesCompatibles["AB+"].includes(responseStudent))
 
-                console.log(donantesCompatibles[responseStudent])
-                console.log(donantesCompatibles[responseStudent].includes(randomBlood))
-                console.log(responseStudent)
-                
                 if(donantesCompatibles[responseStudent].includes(randomBlood)){
                 
                     console.log("Muy bieeen estudiante, acertó!!!!")
@@ -106,7 +102,7 @@ function bloodGame() {
 
         round++;
     }while(round<5)
-
+    return points;
 }
 
 
