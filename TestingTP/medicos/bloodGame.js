@@ -105,7 +105,7 @@ function bloodGame() {
 
 
         round++;
-    }while(round>0)
+    }while(round<5)
 
 }
 
